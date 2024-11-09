@@ -1,0 +1,176 @@
+:root, ::after, ::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+
+    font-size: 13px;
+    font-weight: var(--font-weight-500);
+}
+
+body {
+    margin: 0;
+    background-color: var(--Light-Grayish-Blue);
+    font-family: Manrope, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.font-weight-700 {
+    font-weight: var(--font-weight-700);
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.card {
+    margin: 5rem auto 0 auto;
+    background-color: white;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    color: var(--Grayish-Blue);
+    z-index: 0;
+}
+
+.card, .second {
+    width: 85%;
+    max-width: 400px;
+}
+
+img {
+    width: 100%;
+}
+
+.data {
+    padding: 2em;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+.person {
+    display: flex;
+    padding: 2em;
+}
+
+.person .person_avatar {
+    width: 3rem;
+    border-radius: 50%;
+    margin-right: 1em;
+    align-self: flex-start;
+}
+
+.name {
+    margin-bottom: 0.5em;
+}
+
+.person .photo_con {
+    width: 2.5em;
+    height: 2.5em;
+    margin-left: auto;
+    align-self: center;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Share {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    align-items: center;
+    z-index: 1;
+    height: 7em;
+
+    position: absolute;
+    transform: translateY(-100%);
+
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+}
+
+.share_word {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.Share .photo_Share {
+    width: 3em;
+    padding-left: 1em;
+}
+
+.photo_con .photo {
+    width: 50%;
+    height: auto;
+}
+
+.attribution {
+    margin-top: 0.5em;
+}
+
+@media (min-width: 700px) {
+    .card {
+        display: flex;
+        margin-top: 18em;
+        width: 45%;
+        min-width: 45em;
+        max-width: 53em;
+    }
+
+    .card .drawer {
+        width: 40%;
+    }
+
+    .data {
+        padding-bottom: 0;
+    }
+
+    .Share {
+        border-radius: 0.4rem;
+        padding: 1rem 2.5rem;
+        height: auto;
+        width: auto;
+
+        transform: translateY(-280%) translateX(100%);
+    }
+    
+    .Share * {
+        z-index: 1;
+    }
+
+    .Share .photo_Share {
+        width: 2.5em;
+        padding-left: 1em;
+    }
+
+    .Share #second_button {
+        display: none;
+    }
+
+    .second::after {
+        content: "";
+
+        width: 2em;
+        height: 2em;
+        top: 0;
+        left: 0;
+
+        z-index: 0;
+        position: absolute;
+        transform:  translateY(2.2em)  translateX(10.7em) rotate(45deg);
+
+        background-color: var(--Very-Dark-Grayish-Blue);
+    }
+}
